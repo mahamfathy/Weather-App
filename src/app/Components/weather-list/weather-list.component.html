@@ -3,7 +3,7 @@
   <ul class="list-group">
     @for (cityWeather of weatherList; track cityWeather.id) {
     <button
-      style="font-size: larger; font-weight: 500"
+      style="font-size: medium; font-weight: 500"
       class="list-group-item btn btn-block btn-primary"
       (click)="navigateToWeather(cityWeather.temperature)"
     >
