@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './weather.component.css',
 })
 export class WeatherComponent implements OnInit {
-  temperature: number = 15;
+  temperature: number = 0;
   unit: string = '℃';
   constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {

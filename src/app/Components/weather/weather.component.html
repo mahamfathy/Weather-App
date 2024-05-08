@@ -2,14 +2,20 @@
   <div class="card mt-5" [appBackGroundColor]="temperature">
     <div class="card-body">
       <h2 class="card-title text-white">Weather Application</h2>
-      <p class="card-text text-white">
+      <p class="card-text text-white pt-3 pb-3" style="font-size: larger">
         Current Temperature :
         {{ temperature | temperatureConversion : unit | number : "1.2-2" }}
         {{ unit }}
       </p>
+      @if (unit === '℃') {
       <button class="btn btn-secondary" (click)="toggleUnit()">
-        Toggle Unit
+        Toggle To ℉ Unit
       </button>
+      }@else {
+      <button class="btn btn-secondary" (click)="toggleUnit()">
+        Toggle To ℃ Unit
+      </button>
+      }
     </div>
   </div>
 </div>
