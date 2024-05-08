@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { BackGroundColorDirective } from '../../Directives/back-ground-color.directive';
 import { ActivatedRoute } from '@angular/router';
 import { TemperatureConversionPipe } from '../../Pipes/temperature-conversion.pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-weather',
   standalone: true,
-  imports: [BackGroundColorDirective, TemperatureConversionPipe],
+  imports: [BackGroundColorDirective, TemperatureConversionPipe, CommonModule],
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.css',
 })
@@ -25,6 +26,5 @@ export class WeatherComponent implements OnInit {
 
   toggleUnit() {
     this.unit = this.unit === '℃' ? '℉' : '℃';
-    
   }
 }

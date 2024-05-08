@@ -3,7 +3,8 @@
     <div class="card-body">
       <h2 class="card-title text-white">Weather Application</h2>
       <p class="card-text text-white">
-        Current Temperature :  {{ temperature | temperatureConversion : unit }}
+        Current Temperature :
+        {{ temperature | temperatureConversion : unit | number : "1.2-2" }}
         {{ unit }}
       </p>
       <button class="btn btn-secondary" (click)="toggleUnit()">
