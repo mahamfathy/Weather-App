@@ -9,9 +9,10 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './weather-list.component.css',
 })
 export class WeatherListComponent {
+
   weatherList: any[] = [
     { city: 'Palastine', temperature: 22 },
-    { city: 'Cairo', temperature: 30 },
+    { city: 'Cairo', temperature: 50 },
     { city: 'New York', temperature: 5 },
   ];
   constructor(private router: Router) {}
