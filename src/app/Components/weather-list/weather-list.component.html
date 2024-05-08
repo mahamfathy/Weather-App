@@ -1,7 +1,24 @@
 <div class="container">
   <h2>Weather List</h2>
+
+  <div class="row">
+    <div class="col-sm-6 mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by city"
+        [(ngModel)]="searchCity"
+      />
+    </div>
+    <div class="col-sm-6 mb-3">
+      <button class="btn btn-primary btn-block" (click)="filterWeatherList()">
+        Filter
+      </button>
+    </div>
+  </div>
+
   <ul class="list-group">
-    @for (cityWeather of weatherList; track cityWeather.id) {
+    @for (cityWeather of filterSearchList; track cityWeather.id) {
     <button
       style="font-size: medium; font-weight: 500"
       class="list-group-item btn btn-block btn-primary"
