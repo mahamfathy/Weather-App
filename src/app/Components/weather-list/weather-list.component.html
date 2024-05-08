@@ -16,6 +16,22 @@
       </button>
     </div>
   </div>
+  <div class="mb-3">
+    <button
+      class="btn btn-secondary"
+      style="margin-left: 10px"
+      (click)="sortWeatherList('city')"
+    >
+      Sort By City
+    </button>
+    <button
+      class="btn btn-secondary"
+      style="margin-left: 10px"
+      (click)="sortWeatherList('temperature')"
+    >
+      Sort By Temperature
+    </button>
+  </div>
 
   <ul class="list-group">
     @for (cityWeather of filterSearchList; track cityWeather.id) {
